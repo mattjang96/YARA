@@ -1,7 +1,7 @@
 rule SQLi: mal 								// tag: mal
 {
-	meta: 									// meta: additional information
-											// won't affect code
+	meta: 								// meta: additional information
+									// won't affect code
 		author = "Matthew Jang"
 		maltype = "SQL Injection for MySQL, Oracle, SQL Server, etc."
 		reference = "https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#SyntaxBasicAttacks"
@@ -9,16 +9,16 @@ rule SQLi: mal 								// tag: mal
 
 	strings:
 
-		$char1 = "1=1"						// 1=1 is always true
-		$char2 = "--" 						// line comments
-		$char3 = "#"
-		$str1 = "CONCAT" nocase    			// for MySQL
-		$str2 = "CHAR" nocase
-		$str3 = "Hex" nocase
-		$str4 = "admin' --"					// bypassing login screen
-		$str5 = "admin' #"
-		$str6 = "admin' /*"                                                                       
-		$str7 = "anotheruser" nocase
+	    $char1 = "1=1"						// 1=1 is always true
+	    $char2 = "--" 						// line comments
+	    $char3 = "#"
+	    $str1 = "CONCAT" nocase    				// for MySQL
+	    $str2 = "CHAR" nocase
+	    $str3 = "Hex" nocase
+	    $str4 = "admin' --"					// bypassing login screen
+	    $str5 = "admin' #"
+	    $str6 = "admin' /*"                                                                       
+	    $str7 = "anotheruser" nocase
 	    $str8 = "doesnt matter" nocase
 	    $str9 = "MD5" nocase
 	    $str10 = "HAVING" nocase 
@@ -56,7 +56,7 @@ rule SQLi: mal 								// tag: mal
 
 	condition: 
 
-		any of them
+	    any of them
 
 }
 
