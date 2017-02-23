@@ -2,10 +2,10 @@ rule SQLi: mal 								// tag: mal
 {
 	meta: 								// meta: additional information
 									// won't affect code
-		author = "Matthew Jang"
-		maltype = "SQL Injection for MySQL, Oracle, SQL Server, etc."
-		reference = "https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#SyntaxBasicAttacks"
-		description = "YARA rule to detect the most common SQL injection commands/strings"
+	    author = "Matthew Jang"
+	    maltype = "SQL Injection for MySQL, Oracle, SQL Server, etc."
+	    reference = "https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#SyntaxBasicAttacks"
+	    description = "YARA rule to detect the most common SQL injection commands/strings"
 
 	strings:
 
